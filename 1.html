@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Perfect Coffee Experience</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f3e9;
+            color: #3e2723;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 0;
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            color: #6f4e37;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .content {
+            text-align: center;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            padding: 0 20px;
+            color: #5d4037;
+        }
+        .order-button {
+            display: inline-block;
+            background-color: #6f4e37;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .order-button:hover {
+            background-color: #8d6e63;
+        }
+        .coffee-image {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .coffee-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            color: #795548;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="header">
+                <h1>We Love Excellent Coffee</h1>
+            </div>
+            
+            <div class="content">
+                <p>Many people can't begin their morning without a freshly prepared cup of coffee, and we completely understand why.</p>
+            </div>
+            
+            <div style="text-align: center;">
+                <asp:Button ID="btnOrder" runat="server" Text="ORDER NOW" CssClass="order-button" OnClick="btnOrder_Click" />
+            </div>
+            
+            <div class="coffee-image">
+                <asp:Image ID="imgCoffee" runat="server" ImageUrl="~/images/coffee-image.jpg" AlternateText="Delicious coffee" />
+            </div>
+            
+            <div class="footer">
+                <p>&copy; 2025 Premium Coffee Co. All rights reserved.</p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
